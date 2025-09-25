@@ -12,6 +12,15 @@ def resource_path(relative_path):
         base_path = os.path.abspath(".")
     return os.path.join(base_path, relative_path)
 
+# === BLOC PYINSTALLER / DEBUG ===
+# Permet de lancer le jeu en .exe avec toutes les ressources dans le même dossier
+try:
+    # Redirige les erreurs vers la console (visible dans PyInstaller)
+    import traceback
+except:
+    pass
+
+
 pygame.init()
 
 # === CONST ===
